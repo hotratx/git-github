@@ -11,21 +11,6 @@
 
 ## Comandos
 
-### Desfazer mudanças
-Para desfazer uma mudança que esteja na stage area
-
-    git restore --staged <file>
-
-o arquivo modificado sairá do stage área.
-
-Descartar uma modificação
-
-    git checkout -- <file>
-    git restore <file>
-
-podemos usar esses dois comandos.
-
-
 ## Não track arquivos e pastas
 Para o git ignorar arquivos basta especificar adicionar no arquivo
 .gitignore. Dentro deste arquivo colocamos o nome do arquivo com sua extensão e as pastas que não queremos que o git mapeie.
@@ -53,53 +38,10 @@ Podemos ver o historico de commit em arquivos especificos
 
     git hist -- <file>
 
-## Configurando alias
-
-    git config --global alias.hist "log --oneline --graph --decorate --all"
-
-Usamos o comando para ver todas as configurções do git
-
-    git config --global --list
-
 ### Log
 Para ver todos os commits utilizamos o log
 
     git log
-
-
-### Mudar o branch padrão
-
-    git config --global init.defaultBranch <name>
-
-### Configure user and email
-
-    git config --global user.name "Sam Smith"
-    git config --global user.email sam@example.com
-
-# Branchs
-Para criar um novo branch e ativa-ló usamos a flag -b
-
-    git branch -b featurea
-
-#### Para alternar entre os branchs
-
-    git checkout name_branch
-
-#### Fazer o merge entre branchs
-Primeiro temos que ir para o branch que queremos manter, e aplicamos o merge
-
-    git merge featureb
-
-O comando merge não vai deletar o branch featureb, então temos que fazer isso:
-
-    git branch -d featureb
-
-#### Merge conflict
-Quando ocorre um conflito no merge será apresentado o problema e as opções para
-resolver ser for possível.
-
-#### branch -a
-A flag -a, mostra todas as nossas branchs.
 
 
 # Comando Stash

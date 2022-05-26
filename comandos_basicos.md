@@ -58,9 +58,24 @@ stage area, e até mesmo entre branchs.
 
     git help diff
 
+Mostra a diferença entre um arquivo `modified` quando não está na `staged area`
+e o último commmit.
+
+    git diff index.html
+
 O diff entre dois commit
 
-    git diff <commit> <commit>
+    git diff <hash> <hash>
+
+ou
+
+    git diff <hash> <hash>
+
+Para utilizar o `diff` em um arquivo `modified` que já está na `staged area` 
+precisamos usar uma flag `--cached` ou `staged`.
+
+    git diff --cached index.html
+    git diff --staged index.html
 
 [⬆️ Back to top](#tabela-conteúdo)<br>
 
@@ -78,4 +93,18 @@ Precisamos apenas passar os nomes dos branchs:
 
     git diff branchA branchB
     
+
+### Desfazer mudanças
+Para desfazer uma mudança que esteja na stage area
+
+    git restore --staged <file>
+
+o arquivo modificado sairá do stage área.
+
+Descartar uma modificação
+
+    git checkout -- <file>
+    git restore <file>
+
+podemos usar esses dois comandos.
 

@@ -1,4 +1,4 @@
-### Ver as confifurações do git 
+### Ver as confifurações globais do git 
 Mostra as configurações globais a flag -l é para listar.
 
     git config --global -l
@@ -13,4 +13,8 @@ Mostra as configurações globais a flag -l é para listar.
 
     git config --global alias.hist "log --oneline --graph --decorate --all"
 
+### Configure user and email
+
+    git config --global user.name "Sam Smith"
+    git config --global user.email sam@example.com
 
