@@ -18,3 +18,8 @@ Mostra as configurações globais a flag -l é para listar.
     git config --global user.name "Sam Smith"
     git config --global user.email sam@example.com
 
+# Para mudar o diretório origin
+Alteramos o origin para o notes
+
+    git remote set-url origin git@github.com:hotratx/notes.git
+
