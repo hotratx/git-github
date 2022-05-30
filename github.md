@@ -9,17 +9,22 @@ Para adicionar um repositório local ao github
     
     git remote add origin https://github.com/ksjdlfj
 
-o subcomando add tem dois argumentos o primeiro o origin (nome que será a representação do endereço)
-o segundo o endereço do repositório remoto.
+o subcomando add tem dois argumentos o primeiro o origin (será a representação 
+do endereço é um alias pode ser qualquer nome, se não colocarmos nada por padrão 
+será `origin`), o segundo o endereço do repositório remoto. Por convenção 
+definimos o nome origin como repositório principal.
 
-Por convenção definimos o nome origin como repositório principal.
+Para verificarmos qual o repositório que estamos conectados usamos:
+
+    git remote -v
 
 #### Push to remote
 Para enviar pro repositório remoto usamos:
 
     git push -u origin master --tags
 
-* -u: indica que vamos colocar o nome do diretório remoto aqui origin. Na primeira vez, depois não será mais necessário?
+* -u: indica que vamos colocar o nome do diretório remoto aqui origin. 
+Na primeira vez, depois não será mais necessário?
 * em seguida dizemos qual branch vamos enviar
 * se quisermos enviar as tags, adicionamos a flag --tags.
 
