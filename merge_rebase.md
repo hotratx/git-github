@@ -60,3 +60,14 @@ colocar todos os commits que foram feitos na branch `teste`.
 
 Depois vamos para a `master` e fazemos um `merge`. Como já passamos todos os 
 commits que foram criados da master já na teste o merge resultará em um `Fast-forward`.
+
+
+#### Atualizar os commits da branch teste
+Suponha que criamos a branch `teste` para desenvolver uma grande funcionalidade 
+que vai levar bastante tempo para ficar pronta. Nesse tempo fizemos diversos 
+commits na branch master em outros pontos menores e resolução de bugs, assim
+vou querer atualizar minha branch `teste` com esses commits da branch `master`.
+Para isso podemos usar o rebase na branch `teste`. O rebase irá pegar todos os 
+commits da `master` e colocar antes dos commits que foram feitos na `teste`.
+O resultado é o mesmo de criarmos uma nova branch e adicionar todos os commits 
+já feitos na branc `teste`.

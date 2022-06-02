@@ -14,3 +14,21 @@ assim o arquivo em questão irá aparecer como `modified` basta adicionar no
 Podemos abortar o merge com o comando 
 
     git merge --abort
+
+## Conflito do rebase 
+Quando temos um conflito no merge (merge cria um commit de rebase), o rebase não 
+possui um commit de rebase, logo ele para no meio do processo e pede para 
+que resolvemos manualmente o conflito e depois podemos continuar com o rebase 
+ou abortar.
+
+Depois de resolver o conflito damos continuidade ao rebase
+
+    git rebase --continue
+
+caso preferimos abortar o rebase
+
+    git rebase --abort 
+
+existe outra opção que é `skip` (pular) o commit.
+
+    git rebase --skip
