@@ -7,18 +7,15 @@ Para criar um novo branch e ativa-ló usamos a flag -b
 
     git checkout name_branch
 
-#### Fazer o merge entre branchs
-Primeiro temos que ir para o branch que queremos manter, e aplicamos o merge
+#### Deletar uma Branch 
+Para deletar uma branch temos que ir para outra branch. 
 
-    git merge featureb
+    git branch -d teste
 
-O comando merge não vai deletar o branch featureb, então temos que fazer isso:
+Caso não aplicamos um merge ou rebase e queremos perder os commits que foram 
+feitos na branc teste precisamos usar a flag -D com d maiúsculo.
 
-    git branch -d featureb
-
-#### Merge conflict
-Quando ocorre um conflito no merge será apresentado o problema e as opções para
-resolver ser for possível.
+    git branch -D teste
 
 #### branch -a
 A flag -a, mostra todas as nossas branchs.

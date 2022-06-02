@@ -13,6 +13,8 @@ Mostra as configurações globais a flag -l é para listar.
 
     git config --global alias.hist "log --oneline --graph --decorate --all"
 
+A flag `--all` vai mostrar todos os commit de todas as branchs.
+
 ### Configure user and email
 
     git config --global user.name "Sam Smith"

@@ -16,7 +16,7 @@ para o stage area e modificados, por fim são comitados e vão para o repository
 Contém todos os commits, branchs e arquivos
 
 ### HEAD
-O HEAD é utilizado para indicar que queremos o último commit do branch.
+O HEAD é um ponteiro que indica em qual branch e commit estamos.
 
 ### Gitignore
 Para o git ignorar arquivos basta especificar adicionar no arquivo
