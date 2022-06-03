@@ -32,3 +32,19 @@ Alteramos o origin para o notes
 
     git remote set-url origin git@github.com:hotratx/notes.git
 
+## Alias 
+Para configurar um alias usamos o comando
+
+    git config alias.<nosso-alias> "comando que será representado pelo alias"
+
+exemplo: 
+  
+    git config alias.s "status"
+
+agora em vez de digitar `git status` posso usar o alias `git s` que vou ter o 
+mesmo comando.
+
+## Remover o alias
+Para remover um alias usamos o comando 
+
+    git config --unset alias.s

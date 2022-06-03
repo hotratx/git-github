@@ -171,3 +171,13 @@ Podemos usar o seguinte comando
     git branch bug origin/bug
     
 assim a branch `bug` já vai ficar trackeada com a `bug` remota.
+Ainda usar outro comando 
+
+    git checkout bug
+
+## Deletando branch no repo remoto
+Para deletar uma branch no repositório remoto podemo usar o comando
+
+    git push origin :bug
+
+ou seja, estamos enviando nada para a branch remota logo ela será deletada.
