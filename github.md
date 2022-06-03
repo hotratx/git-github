@@ -109,3 +109,65 @@ Para deletar um branch remoto utilizamos
 
     git push origin :<name-branch-será-deletado>
 
+## origin/master
+Ao inspecionar os commits temos o ponteiro `origin/master` que aponta para o 
+repositório remoto.
+
+>`origin` representa o endereço do repositório remoto.
+
+#### Branchs Remotas
+Para ver as branchs remotas temos a flag `-r`
+
+    git branch -r
+
+Para ver todas as branchs de uma vez usamos a flag `-a`
+
+    git branch -a
+
+#### Atualizar repo remoto
+Para atualizar o repositório remoto precismos `empurrar` os commits, para isso 
+usamos o comando `push`
+
+    git push origin master:master
+
+* `origin` é o repositório remoto.
+* o primeiro `master` é de qual branch partem os commits, neste caso é a 
+master local. O segundo `master` é para qual branch remota queremos empurrar 
+esse commits, se não especificarmos ele vai procurar para a branch com mesmo 
+nome da local.
+
+Podemos trackear a branch para não precisar ficar especificando a cada push. Para 
+isso temos a flag `-u`
+
+    git push -u origin master
+
+a partir de agora não precisamos mais especificar pois o git já trackeou que a 
+branch master deve empurar para a branch master do repositório.
+
+### Adicionar nova branch no repositório remoto
+O git vai procurar uma branch chamada `teste` no remoto, caso não encontre ele
+irá criar uma nova branch chamada `teste`.
+
+    git push origin teste
+
+Podemos trackear a branch `teste` do repositório local com o remoto com a 
+flag `-u`
+
+    git push -u origin teste
+
+### Enviar commits de uma branch para outra branch
+Será criada uma nova branch no repositório remoto com o nome de `bug` e tera os 
+commits da branch master local.
+
+    git push origin master:bug
+
+### Branchs remotas que não estão no repo local
+Podemos ver as branchs remotas como comando
+
+    git branch -r 
+
+Podemos usar o seguinte comando
+
+    git branch bug origin/bug
+    
+assim a branch `bug` já vai ficar trackeada com a `bug` remota.
