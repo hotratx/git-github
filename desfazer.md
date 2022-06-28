@@ -63,4 +63,49 @@ Vai subir para a stage area apenas arquivos que foram deletados.
 
     git add -u
 
+## Editar o último commit
+Para editar titulo de último commit ou adicionar alterações usaos o `--amend`
 
+    git commit --amend
+
+WARNING: ele muda o id do commit logo deve ser usado apenas localmente.
+
+## Adicionar um commit especifico
+Caso queira pegar apenas um commit de um branch sem pegar todas as mudanças. 
+Queremos pegar apenas a `cereja do bolo`
+
+    git cherry-pick hash
+
+
+## Commitar em partes
+Irá abrir um menu para decidir se queremos ou não adicionar tais pedaços.
+
+    git add -p
+
+## Juntar vários commits em commits menores
+Rebase também serve para trabalhar com o historico. 
+Vamos juntos os últimos dois commits:
+
+    git rebase -i HEAD~2
+
+-i: interativo
+
+vai arbir o texto com as informações disponíveis. Vamos usar o `squash` para 
+juntos os dois commits.
+
+### --fixup
+Vamos corrigir o último commit.
+
+    git commit --fixup hash
+
+Será criado um novo commit e depois quando usarmos a opção `--autosquash` ele 
+já vai identificar que queremos fazer um fixup.
+
+### Podemos ter conflitos com a branch remota
+Para lidar com isso podemos usar o rebase
+    
+    git pull origin master --rebase
+
+# Verificar 
+
+    git checkout .
