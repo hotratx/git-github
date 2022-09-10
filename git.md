@@ -51,10 +51,8 @@ Para devolver as modificações no working directory
 ## Git reflog
 Ao contrário do git log que mostra os commits IDs, o reflog mostra todas
 as ações que foram feitas no projeto. Podemos usar esse registro para
-retornar a algum ponto mesmom depois de um reset. Basta aplicar o reset no 
+retornar a algum ponto mesmo depois de um reset. Basta aplicar o reset no 
 commit desejado.
-
-
 
 
 ## Conflitos
